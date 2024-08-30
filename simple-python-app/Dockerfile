@@ -5,13 +5,13 @@ FROM python:3.8
 WORKDIR /app
 
 # Copy the requirements file
-COPY requirements.txt .
+COPY simple-python-app/requirements.txt .
 
 # Install the project dependencies
 RUN pip install -r requirements.txt
 
 # Copy the application code into the container
-COPY . .
+COPY simple-python-app/ .
 
 # Expose the port the Flask application will be listening on
 EXPOSE 5000
